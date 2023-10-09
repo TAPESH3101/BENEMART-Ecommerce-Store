@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static '/css/DSA1.css' %}" />
+    
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  </style>
+<body>
+    <div class="split left">
+      <div class="mt-0">
+        <a href="{% url 'store' %}"><button type="button" class="btn btn-dark">Go Back</button></a>
+        </div>
+          <!--2nd HTML-->
+          <div class="column">
+        <img id=featured src="{% static '/images/pendrive.png' %}" >
+
+        <div id="slide-wrapper" >
+          <img id="slideLeft" class="arrow" src="{% static '/images/arrow-left.png' %}">
+
+          <div id="slider">
+            <img class="thumbnail" src="{% static '/images/pendrive.png' %}" >
+            <img class="thumbnail" src="{% static '/images/pendrive1.png' %}" >
+            <img class="thumbnail" src="{% static '/images/pendrive2.png' %}" >
+            <img class="thumbnail" src="{% static '/images/pendrive3.png' %}" >
+            <img class="thumbnail" src="{% static '/images/pendrive4.png' %}" >
+            
+
+            <img class=>
+            <!--<img class="thumbnail" src="images/preset2.jpg">
+            <img class="thumbnail" src="images/preset3.jpg">
+            <img class="thumbnail" src="images/preset4.jpg"-->
+          </div>
+                  <img id="slideRight" class="arrow" src="{% static '/images/arrow-right.png' %}">
+        </div>
+      </div>
+          
+      
+          
+        
+      </div>
+      
+      <div class="split right">
+      <div id="content-wrapper">  
+          <div class="column1">
+        <div class="name">HP v236w 64GB USB 2.0 Pen Drive</div>
+          <div class="subname">STORAGE</div>
+          <div class="price">₹450</div>
+        <div class="description">
+          <p>
+            HP v236w 64 GB pen drive not only looks stylish but is also a highly utilitarian device. The pen drive has a compact design and has a capacity of 64 GB. This device will let you carry important data along with you wherever you go. 
+          </p>
+          <h3>About this items</h3>
+          <ul>
+          <li>Durable metal Charming appearance which brings a great sense of style</li>
+		      <li>Electronic plating after printing technic (Anti-fake). Other Features : Plug & Play</li>
+		      <li>Lidless, compact design with integrated strap-hole, Temperature Proof, Shock-Proof, and vibration-proof</li>
+		      <li>This pendrive is compatible with operating systems such as Windows 2000/XP and Vista, Windows 7, 8, 10 and MAC operating systems 10.3 and above. The HP V236W 64GB Pendrive has a minimum write rate of 4MB/sec and a read rate of 14MB/sec</li>
+          </ul>
+          </div>
+
+        
+        <a href="#"><button class="custom-btn btn-3"><span>Add to Cart</span></button></a>
+        <a href="#"><button class="custom-btn btn-3"><span>Buy Now</span></button></a>
+      </div>
+      
+      
+        
+      </div>
+    <div class="column2">
+    
+      
+      <h3>Product details</h3>
+      <p>
+        Brand : HP
+        <br>Manufacturer : Fortune Marketing Pvt Ltd, D1/2 Okhla Industrial Area Phase 2 New Delhi Contact No : 011-30890010</br>
+        <br>Item Height	: 5 Millimeters</br>
+        <br>Item Width	: 14.8 Millimeters</br>
+        <br>Product Dimensions	: 4.5 x 1.48 x 0.5 cm; 6.4 Grams</br>
+        <br>Item model number	: HPFD236W-64</br>
+        <br>Are Batteries Included	: No</br>
+        <br>Included Components	: Pen Drive</br>
+        <br>Manufacturer	: Fortune Marketing Pvt Ltd</br>
+        <br>Country of Origin	: India</br>
+        <br>Item Weight	: 6.4 g</br>
+      </p>
+    
+      </div>
+
+		
+ 
+    <!--JAVASCRIPT-->
+  <script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+
+
+	</script>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous"
+  ></script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"
+></script>
+
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous"
+></script>
+         
+</body>
+</html>

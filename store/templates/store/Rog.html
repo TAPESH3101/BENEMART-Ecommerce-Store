@@ -1,0 +1,276 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROG Strix</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/DSA1.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+</head>
+<style>
+	button {
+  margin: 20px;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn-3 {
+  background: rgb(0, 172, 238);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover {
+  color: rgba(2, 126, 251, 1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+
+.name {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .subname {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  .price {
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .description p{
+    font-size: 14px;
+  line-height: 18px;
+  color: #444;
+  letter-spacing: .3px;
+  margin-top: 10px;
+  width: 430px;
+  height: 71px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: no-wrap;
+  }
+
+</style>
+<body>
+    <div class="split left">
+      <div class="mt-0">
+        <a href="{% url 'store' %}"><button type="button" class="btn btn-dark">Go Back</button></a>
+        </div>
+        <!--2nd HTML-->
+        <div class="column">
+			<img id=featured src="{% static '/images/rog01.jpg' %}" >
+
+			<div id="slide-wrapper" >
+				<img id="slideLeft" class="arrow" src="{% static '/images/arrow-left.png' %}">
+
+				<div id="slider">
+					<img class="thumbnail" src="{% static '/images/rog01.jpg' %}" >
+					<img class="thumbnail" src="{% static '/images/rog02.jpg' %}" >
+					<img class="thumbnail" src="{% static '/images/rog03.jpg' %}" >
+					<img class="thumbnail" src="{% static '/images/rog04.jpg' %}" >
+
+					<img class=>
+					<!--<img class="thumbnail" src="images/preset2.jpg">
+					<img class="thumbnail" src="images/preset3.jpg">
+					<img class="thumbnail" src="images/preset4.jpg"-->
+				</div>
+                <img id="slideRight" class="arrow" src="{% static '/images/arrow-right.png' %}">
+			</div>
+		</div>
+        
+    
+        
+      
+    </div>
+    
+    <div class="split right">
+    <div id="content-wrapper">  
+        <div class="column1">
+			<div class="name">ASUS ROG Strix G17 (2021)</div>
+    		<div class="subname">ASUS Laptops</div>
+    		<div class="price">₹95000</div>
+			<div class="description">
+				<p>     
+                    Focused firepower streamlines and elevates the core Windows 10 gaming experience in the ROG Strix G17. With a powerful AMD Ryzen 5000-Series CPU and GeForce RTX GPU, everything from gaming to multitasking is fast and fluid.
+				</p>
+				<ul>
+					<li>Processor System on Chip (SoC), Apple M1 chip</li>
+					<li>Graphics and Video Support Apple 8-core GPU</li>
+					<li>Display 13.3-inch (diagonal) LED-backlit display </li>
+					<li>Charging Two Thunderbolt / USB 4 ports</li>
+					<li>Wireless 802.11ax Wi-Fi 6 wireless networking</li>
+				</ul>
+				</div>
+
+			
+			<a href="#"><button class="custom-btn btn-3"><span>Add to Cart</span></button></a>
+			<a href="#"><button class="custom-btn btn-3"><span>Buy Now</span></button></a>
+		</div>
+		
+		
+    </div>
+	<div class="column2">
+	<!-- <ul>
+		<li>BEST PRODUCT</li>
+		<li>BEST PRODUCT</li>
+		<li>BEST PRODUCT</li>
+		<li>BEST PRODUCT</li>
+		<li>BEST PRODUCT</li>
+	</ul> -->
+    <p>ASUS</p>
+        ASUS is one of Fortune magazine's World's Most Admired Companies, and is dedicated to creating products for today and tomorrow's smart life.
+        </p>
+        <p>Manufactured by:</p>
+        <p>Asus, INVENTEC (CHONGQING) CORPORATION, NO.66, WEST DISTRICT 2ND RD, SHAPINGBA DISTRICT, CHONGQING, CHINA 401331</p>
+    </div>
+	<div class="column2">
+		<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/vmaamFEcvgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+	 </div>
+    </div>
+
+
+		
+
+    <!--JAVASCRIPT-->
+    <script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+
+
+	</script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous"
+  ></script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"
+></script>
+
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous"
+></script>
+         
+</body>
+</html>
